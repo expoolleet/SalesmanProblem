@@ -56,6 +56,8 @@ def Main(ndarray):
             stepsOutput += "Минимальный элемент в {0} строке = {1}\r\n".format(i+1, temp)
             for j in range(len(matrix)):
                 matrix[i][j]-=temp
+        stepsOutput += "Получаем матрицу:\r\n"
+        stepsOutput += PrintMatrix(matrix)
         stepsOutput += "Вычитаем минимальный элемент в столбцах:\r\n"
         for i in range(len(matrix)):
             temp = min(row[i] for row in matrix)

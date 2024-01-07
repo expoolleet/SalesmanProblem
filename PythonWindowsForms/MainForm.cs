@@ -25,7 +25,13 @@ namespace SalesmanProblem
 
             char[] splitChar = { ',', ' '};
 
+            if (lines.Length == 0)
+                return;
+
             var n = lines[0].Split(splitChar).Length;
+
+            if (n == 1 || n != lines.Length) 
+                return;
 
             _matrix = new int[n, n];
 
